@@ -121,7 +121,7 @@ Pour afficher les règles appliquées sur Netfilter, exécuter la commande `nft 
 
 Les types de communication autorisés sont : 
 - celles déjà établies,
-- le port 22,
+- le port 22 (SSH),
 - les pings en ipV4 et en ipV6,
 - `lifname "lo"`.
 
@@ -133,4 +133,14 @@ Les types de communication interdits sont :
 - `ct state invalid`.
 
 ## Q.2.5.4
+
+Il faut rajouter les lignes `tcp dport 9101`, `tcp dport 9102` et `tcp dport 9103` dans le fichier de configuration mais le fichier `/etc/nftables.conf` ne contient pas les infos précédentes et je ne sais pas quel fichier modifier.
+
+![image](https://github.com/JuGuillot/Checkpoint-3/assets/161329881/d5a9c165-0a41-4ea4-8a7d-32ada4d05af2)
+
+## Partie 6 : Analyse de logs
+
+Q.2.6.1
+
+![image](https://github.com/JuGuillot/Checkpoint-3/assets/161329881/d97dfcb1-8ebb-4316-8fa7-692eda243276)
 
