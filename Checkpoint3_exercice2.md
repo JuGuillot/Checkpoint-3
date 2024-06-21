@@ -38,7 +38,7 @@ Modification de `/etc/ssd/sshd_config` pour désactiver la connexion par mot de 
 
 ![image](https://github.com/JuGuillot/Checkpoint-3/assets/161329881/0c2c0ac2-15c8-4f9c-80ee-7d4b0cd3cb30)
 
-Partie 3 : Analyse du stockage
+# Partie 3 : Analyse du stockage
 
 ## Q.2.3.1
 
@@ -103,18 +103,34 @@ Pour savoir combien d'espace disponible il reste dans le groupe de volume, utili
 
 On peut voir qu'il reste 1.79Go d'espace libre.
 
-Partie 4 : Sauvegardes
+# Partie 4 : Sauvegardes
 
-Q.2.4.1 
+## Q.2.4.1 
 
-- `Bareos-dir` :
+Pas réussi à faire les quêtes et l'atelier
 
-Ou `Bareos Director`, c'est le coeur de Bareos. Il contrôle l'ensemble des autres composants. Il est installé sur le serveur en charge de la gestion des sauvegardes.
+# Partie 5 : Filtrage et analyse réseau
 
-- `Bareos-sd` :
+## Q.2.5.1
 
-Ou `Bareos Storage Daemon`, c'est lui qui gère l'écriture sur les différents supports de sauvegardes. Il en faut un par sauvegarde.
+Pour afficher les règles appliquées sur Netfilter, exécuter la commande `nft list ruleset` :
 
-- `Bareos-fd` :
+![image](https://github.com/JuGuillot/Checkpoint-3/assets/161329881/9fd473f1-eedb-469e-8b6d-92ff2163675c)
 
-Ou `Bareos File Deamon`, il est installé sur chaque machine devant être sauvegardée. Il est en charge de collecter les informations à sauvegarder et de les envoyer au `Bareos Storage Daemon`.
+## Q.2.5.2
+
+Les types de communication autorisés sont : 
+- celles déjà établies,
+- le port 22,
+- les pings en ipV4 et en ipV6,
+- `lifname "lo"`.
+
+## Q.2.5.3
+
+Les types de communication interdits sont : 
+
+- tout ce qui n'est pas listé ici,
+- `ct state invalid`.
+
+## Q.2.5.4
+
