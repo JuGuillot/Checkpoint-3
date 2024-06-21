@@ -66,3 +66,20 @@ On fait donc un `mdadm --manage /dev/md0 --add /dev/sdb1`, si on refait `mdadm -
 
 ![image](https://github.com/JuGuillot/Checkpoint-3/assets/161329881/25e1d0f7-d61d-4fda-b668-ff8f14e2502a)
 
+Et au bout d'un moment :
+
+![image](https://github.com/JuGuillot/Checkpoint-3/assets/161329881/352550ae-9ac8-4ffa-9d31-fd7d06dd96c0)
+
+## Q.2.3.3
+
+Avec la commande `lvdisplay` on peut voir le détail des groupes de volume : 
+
+![image](https://github.com/JuGuillot/Checkpoint-3/assets/161329881/bdc7172d-2c28-4db6-8c1a-c56b7119e28d)
+
+Pour créer un nouveau volume logique LVM de 2 Go, entrer la commande suivante `lvcreate -n Sauvegardes -L 2G cp3-vg` :
+
+![image](https://github.com/JuGuillot/Checkpoint-3/assets/161329881/0d085f52-a409-476e-b213-c2c77bea99ac)
+
+Ensuite il faut le formater avec `mkfs.ext4 /dev/cp3-vg/Sauvegardes` :
+
+![image](https://github.com/JuGuillot/Checkpoint-3/assets/161329881/79cc289a-e764-4cf2-8fa9-2637ba5a1232)
