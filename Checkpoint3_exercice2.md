@@ -28,3 +28,11 @@ L'accès est bien possible pour l'utilisateur `julien` :
 
 ## Q.2.2.3
 
+Création de la clé depuis le client et envoi de cette clé au serveur :
+
+![image](https://github.com/JuGuillot/Checkpoint-3/assets/161329881/6384c70f-064b-4c51-8708-256c014d229f)
+
+Modification de `/etc/ssd/sshd_config` pour désactiver la connexion par mot de passe :
+
+![image](https://github.com/JuGuillot/Checkpoint-3/assets/161329881/0c2c0ac2-15c8-4f9c-80ee-7d4b0cd3cb30)
+
