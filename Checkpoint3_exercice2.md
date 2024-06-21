@@ -83,3 +83,22 @@ Pour créer un nouveau volume logique LVM de 2 Go, entrer la commande suivante `
 Ensuite il faut le formater avec `mkfs.ext4 /dev/cp3-vg/Sauvegardes` :
 
 ![image](https://github.com/JuGuillot/Checkpoint-3/assets/161329881/79cc289a-e764-4cf2-8fa9-2637ba5a1232)
+
+Pour le montage automatiquement à chaque démarrage dans l'emplacement par défaut `/var/lib/bareos/storage` :
+
+- Il faut monter le volume nouvellement créé sur `/var/lib/bareos/storage` avec la commande `mount /dev/cp3-vg/Sauvegardes /var/lib/bareos/storage`
+- Puis éditer le fichier `/etc/fstab` avec `nano /etc/fstab` et rajouter la dernière ligne :
+
+![image](https://github.com/JuGuillot/Checkpoint-3/assets/161329881/3b20da6a-39e5-4c20-a314-716f545195db)
+
+Vérifier avec `mount -a` qu'il n'y a pas d'erreurs : 
+
+![image](https://github.com/JuGuillot/Checkpoint-3/assets/161329881/6a1d6e88-ecd8-4740-abe0-b9120ad68f57)
+
+## Q.2.3.4
+
+Pour savoir combien d'espace disponible il reste dans le groupe de volume, utiliser la commande `vgdisplay cp3-vg` :
+
+![image](https://github.com/JuGuillot/Checkpoint-3/assets/161329881/f27a56ed-39dd-4ee7-bd50-cebb12c93ca8)
+
+On peut voir qu'il reste 1.79Go d'espace libre.
