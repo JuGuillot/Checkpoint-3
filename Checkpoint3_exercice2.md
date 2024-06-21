@@ -102,3 +102,19 @@ Pour savoir combien d'espace disponible il reste dans le groupe de volume, utili
 ![image](https://github.com/JuGuillot/Checkpoint-3/assets/161329881/f27a56ed-39dd-4ee7-bd50-cebb12c93ca8)
 
 On peut voir qu'il reste 1.79Go d'espace libre.
+
+Partie 4 : Sauvegardes
+
+Q.2.4.1 
+
+- `Bareos-dir` :
+
+Ou `Bareos Director`, c'est le coeur de Bareos. Il contrôle l'ensemble des autres composants. Il est installé sur le serveur en charge de la gestion des sauvegardes.
+
+- `Bareos-sd` :
+
+Ou `Bareos Storage Daemon`, c'est lui qui gère l'écriture sur les différents supports de sauvegardes. Il en faut un par sauvegarde.
+
+- `Bareos-fd` :
+
+Ou `Bareos File Deamon`, il est installé sur chaque machine devant être sauvegardée. Il est en charge de collecter les informations à sauvegarder et de les envoyer au `Bareos Storage Daemon`.
