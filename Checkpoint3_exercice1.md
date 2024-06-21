@@ -1,4 +1,4 @@
-# Partie 1 : Particularité des Unix
+# Partie 1 : Gestion des utilisateurs
 
 ## Q.1.1.1
 
@@ -32,6 +32,8 @@ Puis création d'un dossier personnel pour Lionel Lemarchand et modification des
 
 ![image](https://github.com/JuGuillot/Checkpoint-3/assets/161329881/4cab80ce-e1d7-48c9-a817-ae234515f8ad)
 
+# Partie 2 : Restriction utilisateurs
+
 ## Q.1.2.1
 
 Aller dans les `propriétés de Gabriel Guhl -> Account -> Logon Hours` et modifier en conséquence :
@@ -56,4 +58,37 @@ Ensuite :
 - Clic droit sur `LabUsers -> Link an Existing GPO...` :
 
 ![image](https://github.com/JuGuillot/Checkpoint-3/assets/161329881/4b57ddc8-4307-48b2-aa91-c6c219b61d86)
+
+# Partie 3 : Lecteurs réseaux
+
+## Q.1.3.1
+
+Tout d'abord, il faut partager les dossiers `E:` et `F:` comme ceci :
+
+![image](https://github.com/JuGuillot/Checkpoint-3/assets/161329881/5c0a5320-2c27-4d6f-80d9-98d78adf5e6f)
+
+Faire de même avec `F:`.
+
+Ensuite, créer la GPO :
+
+- Aller dans le `Group Policy Management`
+- Faire un clic droit sur `Group Policy Objects -> New`, lui donner un nom
+- Clique droit puis `Edit`
+- `User Configuration -> Preferences -> Windows Settings -> Drive Maps`
+- Clic droit -> `Neww -> Mapped Drive`
+
+Pour `E:`:
+
+![image](https://github.com/JuGuillot/Checkpoint-3/assets/161329881/582c27c9-b0d0-4fcd-90de-57c9ce1b5633)
+
+Pour `F:` :
+
+![image](https://github.com/JuGuillot/Checkpoint-3/assets/161329881/e1085872-7567-4bfc-a2f5-98f99bae8266)
+
+![image](https://github.com/JuGuillot/Checkpoint-3/assets/161329881/8d416c1f-0e05-464e-b7b1-18822b8e7269)
+
+Ensuite :
+- Clic droit sur `LabUsers -> Link an Existing GPO...`
+
+![image](https://github.com/JuGuillot/Checkpoint-3/assets/161329881/8736ce25-fd87-4aa9-b85b-223ff4739050)
 
