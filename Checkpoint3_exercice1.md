@@ -75,7 +75,7 @@ Ensuite, créer la GPO :
 - Faire un clic droit sur `Group Policy Objects -> New`, lui donner un nom
 - Clique droit puis `Edit`
 - `User Configuration -> Preferences -> Windows Settings -> Drive Maps`
-- Clic droit -> `Neww -> Mapped Drive`
+- Clic droit -> `New -> Mapped Drive`
 
 Pour `E:`:
 
